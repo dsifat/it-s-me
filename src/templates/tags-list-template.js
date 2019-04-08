@@ -6,47 +6,44 @@ import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 
 const TagsListTemplate = ({ data }) => {
-  const {
-    title,
-    subtitle
-  } = data.site.siteMetadata;
-  const { group } = data.allMarkdownRemark;
+    const { title, subtitle } = data.site.siteMetadata;
+    const { group } = data.allMarkdownRemark;
 
-  return (
-    <Layout title={`Tags - ${title}`} description={subtitle}>
-      <Sidebar />
-      <Page title="Tags">
-        <ul>
-          {group.map((tag) => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Page>
-    </Layout>
-  );
+    return (
+        <Layout title={`Tags - ${title}`} description={subtitle}>
+            <Sidebar />
+            <Page title="Tags">
+                <ul>
+                    {group.map((tag) => (
+                        <li key={tag.fieldValue}>
+                            <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+                                {tag.fieldValue} ({tag.totalCount})
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </Page>
+        </Layout>
+    );
 };
 
 export const query = graphql`
-  query TagsListQuery {
-    site {
-      siteMetadata {
-        title,
-        subtitle
-      }
+    query TagsListQuery {
+        site {
+            siteMetadata {
+                title
+                subtitle
+            }
+        }
+        allMarkdownRemark(
+            filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        ) {
+            group(field: frontmatter___tags) {
+                fieldValue
+                totalCount
+            }
+        }
     }
-    allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-    ) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-    }
-  }
 `;
 
 export default TagsListTemplate;

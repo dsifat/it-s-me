@@ -3,16 +3,16 @@ import renderer from 'react-test-renderer';
 import Author from './Author';
 
 describe('Author', () => {
-  const props = {
-    author: {
-      name: 'test',
-      photo: '/photo.jpg',
-      bio: 'test'
-    }
-  };
+    const props = {
+        author: {
+            name: 'test',
+            photo: '/photo.jpg',
+            bio: 'test'
+        }
+    };
 
-  it('renders correctly', () => {
-    const tree = renderer.create(<Author {...props} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+    it('renders correctly', () => {
+        const tree = renderer.create(<Author {...props} />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });

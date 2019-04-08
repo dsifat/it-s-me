@@ -5,28 +5,28 @@ import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 
 const PageTemplate = ({ data }) => {
-  const {
-    title: siteTitle,
-    subtitle: siteSubtitle
-  } = data.site.siteMetadata;
+    const {
+        title: siteTitle,
+        subtitle: siteSubtitle
+    } = data.site.siteMetadata;
 
-  const {
-    title: pageTitle,
-    description: pageDescription
-  } = data.markdownRemark.frontmatter;
+    const {
+        title: pageTitle,
+        description: pageDescription
+    } = data.markdownRemark.frontmatter;
 
-  const { html: pageBody } = data.markdownRemark;
+    const { html: pageBody } = data.markdownRemark;
 
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+    const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
 
-  return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
-      <Sidebar />
-      <Page title={pageTitle}>
-        <div dangerouslySetInnerHTML={{ __html: pageBody }} />
-      </Page>
-    </Layout>
-  );
+    return (
+        <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
+            <Sidebar />
+            <Page title={pageTitle}>
+                <div dangerouslySetInnerHTML={{ __html: pageBody }} />
+            </Page>
+        </Layout>
+    );
 };
 
 export const query = graphql`

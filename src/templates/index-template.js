@@ -7,36 +7,36 @@ import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 
 const IndexTemplate = ({ data, pageContext }) => {
-  const {
-    title: siteTitle,
-    subtitle: siteSubtitle
-  } = data.site.siteMetadata;
+    const {
+        title: siteTitle,
+        subtitle: siteSubtitle
+    } = data.site.siteMetadata;
 
-  const {
-    currentPage,
-    hasNextPage,
-    hasPrevPage,
-    prevPagePath,
-    nextPagePath
-  } = pageContext;
+    const {
+        currentPage,
+        hasNextPage,
+        hasPrevPage,
+        prevPagePath,
+        nextPagePath
+    } = pageContext;
 
-  const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+    const { edges } = data.allMarkdownRemark;
+    const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
-  return (
-    <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar isIndex />
-      <Page>
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
-      </Page>
-    </Layout>
-  );
+    return (
+        <Layout title={pageTitle} description={siteSubtitle}>
+            <Sidebar isIndex />
+            <Page>
+                <Feed edges={edges} />
+                <Pagination
+                    prevPagePath={prevPagePath}
+                    nextPagePath={nextPagePath}
+                    hasPrevPage={hasPrevPage}
+                    hasNextPage={hasNextPage}
+                />
+            </Page>
+        </Layout>
+    );
 };
 
 export const query = graphql`

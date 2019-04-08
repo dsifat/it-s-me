@@ -1,28 +1,34 @@
 const getContactHref = (name, contact) => {
-  let href;
+    let href;
 
-  switch (name) {
+    switch (name) {
     case 'twitter':
-      href = `https://www.twitter.com/${contact}`;
-      break;
+        href = `https://www.twitter.com/${contact}`;
+        break;
     case 'github':
-      href = `https://github.com/${contact}`;
-      break;
+        href = `https://github.com/${contact}`;
+        break;
     case 'vkontakte':
-      href = `https://vk.com/${contact}`;
-      break;
+        href = `https://vk.com/${contact}`;
+        break;
     case 'telegram':
-      href = `telegram:${contact}`;
-      break;
+        href = `telegram:${contact}`;
+        break;
     case 'email':
-      href = `mailto:${contact}`;
-      break;
+        href = `mailto:${contact}`;
+        break;
+    case 'linkedin':
+        href = `https://www.linkedin.com/in/${contact}`;
+        break;
+    case 'facebook':
+        href = `https://www.facebook.com/${contact}`;
+        break;
     default:
-      href = contact;
-      break;
-  }
+        href = contact;
+        break;
+    }
 
-  return href;
+    return href;
 };
 
 export default getContactHref;

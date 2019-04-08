@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import Layout from './Layout';
 
 describe('Layout', () => {
-  const props = {
-    children: 'test',
-    description: 'test',
-    title: 'test'
-  };
+    const props = {
+        children: 'test',
+        description: 'test',
+        title: 'test'
+    };
 
-  it('renders correctly', () => {
-    const tree = renderer.create(<Layout {...props} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+    it('renders correctly', () => {
+        const tree = renderer.create(<Layout {...props} />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
