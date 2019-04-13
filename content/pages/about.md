@@ -3,10 +3,11 @@ title: "About me"
 template: "page"
 ---
 
-My full name is Abdullah Bin Aktar Khan. I have been working as Backend Developer since 2015. 
+Challenges put me into coding and development from strategic planning in the year of 2014 which wasn't my comfort zone at that point. But since then I have in Backend Development and been enjoying it. I love frontend too and have aesthetic sense. I have professional experience in B2B Software Development, SaaS Development, Website and API Development in the sector of Telecommunication, Sales & Distribution, Fin-Tech, Travel and Marketplace.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
-
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
-
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+Skills:
+- Python/Django, DRF, PyTest, Celery, Django-Channels, Pandas, Scrapy
+- Javascript/jQuery, Socket.IO, NodeJS, ReactJS, VueJS.
+- PostgreSQL, MySQL, SQLite.
+- RabbitMQ, Redis, Sentry, Docker, CentOS, Ubuntu, AmazonAWS, Digital Ocean 
+- Stripe, Google Map, Facebook Graph API
